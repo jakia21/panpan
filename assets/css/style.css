@@ -1,0 +1,739 @@
+/*================================================================================
+	Item Name: Crypto ICO - Cryptocurrency Website Landing Page HTML Template
+	Version: 1.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+/*
+Custom color and background color class palette
+*/
+
+/***********google font**********/
+@import url("https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap");
+
+/*********font custom*************/
+@font-face {
+  font-family: "Hubot Sans"; /* Choose a unique name for your font */
+  src: url("/fonts/Hubot-Sans-Bold.ttf") format("woff2"),
+    /* Modern Browsers */ url("/fonts/Hubot-Sans-Bold.ttf") format("woff");
+
+  /* Older Browsers */ /* You can add more file formats here if needed (e.g., .ttf, .eot) */
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Hubot Sans";
+}
+
+li,
+p,
+body {
+  font-family: "Fragment";
+}
+/* body {
+  font-family: "Alien Spaceship", sans-serif;
+} */
+@media (min-width: 1024px) {
+  body {
+    width: 100%;
+    height: 110vh;
+    background-color: #020e2c;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 1158px) {
+  body {
+    /*background-size: auto;*/
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .intro {
+    /*background-attachment: scroll;*/
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .content-wrapper:after {
+    /* background-image: url("../../theme-assets/images/background.png"); */
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    /* background-position: inherit; */
+    /* background-size: inherit; */
+    /* background-attachment: inherit; */
+    /* background-repeat: inherit; */
+    /* position: fixed; */
+    top: 0;
+    z-index: -1;
+  }
+}
+
+@font-face {
+  font-family: "mmain";
+  src: url("../../theme-assets/fonts/new/parchmentmf-vqge.html")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "treasure";
+  src: url("../../DacianDonarium-MV9LJ.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "logo";
+  src: url("../../theme-assets/fonts/WingsLogo.woff2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hide {
+  display: none;
+}
+
+/*.container-fluid {background-color: #050301;}*/
+
+.title-inner {
+  color: #ffe08a;
+}
+
+/*.ripple-section-divider {height: 6.5rem;}*/
+
+.crypto-logo-img {
+  width: 48vh;
+}
+
+.charity-img {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.charity-img img {
+  /*width: 25vw;
+  height: auto;*/
+  height: 80%;
+  border-radius: 15px;
+  border: 3px solid #ff0600;
+  max-height: 280px;
+  margin-top: 1.2rem;
+}
+
+@media (min-width: 1250px) {
+  .charity-img img {
+    margin-top: 0px;
+  }
+  .charity-img {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .charity-img {
+    align-items: center;
+  }
+}
+
+.rhp-black-c {
+  color: #050301;
+} /*RGB 5 / 3 / 1*/
+.rhp-black-bg {
+  background-color: #050301;
+}
+
+.rhp-red-c {
+  color: #c94b11;
+} /*RGB 201 / 75 / 17*/
+.rhp-red-bg {
+  background-color: #c94b11;
+}
+
+.rhp-yellow-c {
+  color: #f5e117;
+} /*RGB 245 / 225 / 23*/
+.rhp-yellow-bg {
+  background-color: #f5e117;
+}
+
+.rhp-darkbeige-c {
+  color: #d5b25a;
+} /*RGB 213 / 178 / 90*/
+.rhp-darkbeige-bg {
+  background-color: #d5b25a;
+}
+
+.rhp-lightbeige-c {
+  color: #efd9ao;
+} /*RGB 239 / 217 / 160*/
+.rhp-lightbeige-bg {
+  background-color: #efd9ao;
+}
+
+.rhp-white-c {
+  color: #ffffff;
+} /*RGB 255 / 255 / 255*/
+.rhp-white-bg {
+  background-color: #ffffff;
+}
+
+.fancy_text {
+  font-family: Cinzel Decorative;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 0.8rem 2.5rem !important;
+}
+
+/*
+RHP Overrides for styles
+---------------------------------------
+simply copy the original element class from the theme css, paste it here and change the params you need.
+*/
+
+.head-area .head-content {
+  min-height: 100vh;
+  color: #ffffff;
+  z-index: 6;
+  padding-top: 5.125rem;
+  /*
+  background : -webkit-gradient(linear, left top, right top, from(#d5b25a), to(rgb(239,217,160)));
+  background : -webkit-linear-gradient(left, #d5b25a, rgb(239,217,160));
+  background :    -moz-linear-gradient(left, #d5b25a, rgb(239,217,160));
+  background :      -o-linear-gradient(left, #d5b25a, rgb(239,217,160));
+  background :         linear-gradient(to right, #d5b25a, rgb(239,217,160));
+  */
+}
+
+@media (max-width: 768px) {
+  .head-area .head-content {
+    padding-top: 3rem;
+  }
+}
+
+/* clean ripple - optinal */
+.ripple-section-divider {
+  height: 0rem !important;
+}
+.bg-ripple-animation {
+  /*opacity: 0.3;*/
+}
+
+.roadmap-info .status li {
+  display: list-item;
+  text-align: left; /*list-style-type: circle;*/
+}
+.roadmap-info .active li {
+  margin-left: -1.5rem;
+}
+
+.section-padding-btm {
+  padding-bottom: 6.5rem;
+}
+
+.btn-white {
+  border-radius: 20px;
+  border: 2px solid white;
+  font-size: 0.7rem !important;
+  padding: 0.25rem 1.5rem;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+.btn-white:hover {
+  background-color: #ffffff50;
+}
+
+.img-left {
+  text-align: right;
+  margin-left: -100px;
+}
+
+.img-tall {
+  margin-bottom: -100px;
+}
+
+.welcome-text {
+  text-align: center;
+  font-size: 2.6rem;
+  width: 100%;
+  color: white;
+  margin-bottom: 10px;
+}
+.welcome-subtext {
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+  color: white;
+}
+.img-mockups2 {
+  max-height: 490px;
+}
+
+@media (max-width: 992px) {
+  .img-mockups2 {
+    max-height: 400px;
+  }
+  .img-left {
+    text-align: center;
+  }
+}
+
+.img-about {
+  width: 50vw;
+  margin-top: -25px;
+}
+
+@media (max-width: 992px) {
+  .crypto-logo-img {
+    height: 40vh;
+    width: auto;
+  }
+  .head-area .head-content {
+    /*min-height: 120vh;*/
+  }
+  .img-left {
+    margin-left: 0px;
+  }
+  .img-about {
+    width: 100vw;
+    margin-left: -5vw;
+    margin-top: 0px;
+  }
+  .img-tall {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 1300px) {
+  .img-about {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 1000px) {
+  .welcome-text {
+    font-size: 2.3rem;
+  }
+}
+@media (max-width: 800px) {
+  .crypto-logo-img {
+    width: 50vw;
+    height: auto;
+  }
+  .welcome-text {
+    font-size: 1.9rem;
+  }
+  .welcome-subtext {
+    font-size: 0.8rem;
+  }
+  .section-padding {
+    /*padding: 0;
+   min-height: 95vh;*/
+    padding-bottom: 10vh;
+  }
+}
+@media (max-width: 400px) {
+  .crypto-logo-img {
+    width: 70vw;
+    height: auto;
+  }
+  .welcome-text {
+    font-size: 1.5rem;
+  }
+  .welcome-subtext {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-mockups2 {
+    /*max-height: 300px; */
+    max-height: 50vw;
+  }
+  .blog-img {
+    text-align: right;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+  }
+  .move-first {
+    /* margin-top: 20vh;*/
+  }
+  .solutions-title {
+    margin-top: 0vh;
+  }
+  .head-area .head-content {
+    /*min-height: 130vh;*/
+  }
+  .btn-lg,
+  .btn-group-lg > .btn {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /*.charity-img {width: 50vw;}*/
+  .mobile_only {
+    display: block;
+  }
+  .no_mobile_only {
+    display: none;
+  }
+}
+
+@media (min-width: 575.98px) {
+  .no_mobile_only {
+    display: block;
+  }
+  .mobile_only {
+    display: none;
+  }
+}
+
+@media (max-width: 482px) {
+  /*  .audit-btn {
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    min-width: 70vw;    
+*/
+}
+.locked-btn {
+  margin-right: 0;
+  margin-left: 0;
+  min-width: 70vw;
+}
+.navbar .navbar-brand {
+  font-size: 0.9rem;
+}
+.main-menu.navbar a.navbar-brand {
+  padding-right: 0;
+}
+
+.blog .border-dash:hover .card-body .blog-img.overlap,
+.blog .border-dash:focus .card-body .blog-img.overlap,
+.blog .border-dash:active .card-body .blog-img.overlap {
+  -webkit-transform: translate3d(0, 0px, 0);
+  -moz-transform: translate3d(0, 0px, 0);
+  transform: translate3d(0, 0px, 0);
+}
+
+@media (min-width: 992px) {
+  .navbar-touch .utillink {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  h4 {
+    text-align: center;
+  }
+  /* p, h3 {text-align: justify;} */
+}
+
+@media (max-width: 482px) {
+  .move-first {
+    /*margin-top: 10vh;*/
+  }
+}
+
+@media (max-width: 356px) {
+  .move-first {
+    /*margin-top: 80vh;*/
+  }
+}
+
+@media (max-width: 340px) {
+  .navbar .navbar-brand {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-lg,
+  .btn-group-lg > .btn {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+div.audit-btn {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  font-size: 0.75rem;
+}
+a.audit-btn {
+  text-align: center;
+  /*color: #ffffff !important;*/
+  font-size: 0.75rem;
+  padding: 0;
+}
+a.audit-btn:hover {
+  color: #ffffff !important;
+}
+
+@media (min-width: 482px) {
+  .locked-btn {
+    margin-left: 3vw;
+  }
+}
+
+@media (max-width: 420px) {
+  .btn-lg,
+  .btn-group-lg > .btn {
+    min-width: 60vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .head-area .head-content {
+    /*min-height: 170vh;*/
+  }
+}
+
+@media (min-width: 420px) and (max-width: 550px) {
+  .btn-lg,
+  .btn-group-lg > .btn {
+    min-width: 40vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contact .contact-info li span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .navbarcontainer {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    flex-direction: row;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin: auto;
+    max-width: 50vw;
+  }
+  .team .profile {
+    /*    margin-top: auto;*/
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .no_pad_only {
+    display: none !important;
+  }
+  .no_pad_col_ow_full {
+    /*flex: 0 0 100%;
+    max-width: 100%;*/
+    width: 100vw;
+  }
+  .no_pad_left_ow_center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .pad_no_pc {
+    padding-right: 4vw;
+    padding-left: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .no_phone {
+    display: none !important;
+  }
+}
+
+.navbar .navbar-brand .brand-text {
+  font-family: Poppins, "Comfortaa", "Roboto", "Helvetica Neue", Arial,
+    sans-serif;
+}
+
+.phoneimg {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .phoneimg {
+    max-width: 40vw;
+  }
+}
+@media (min-width: 575.98px) and (max-width: 768px) {
+  .phoneimg {
+    max-width: 60vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .pad_only {
+    display: none !important;
+  }
+}
+@media (max-width: 991.98px) {
+  a.audit-btn {
+    font-size: 0.61rem;
+  }
+  .pad_only {
+    display: none !important;
+  }
+  .pad_no_pc {
+    padding-right: 0vw;
+    padding-left: 0vw;
+  }
+  .no_desktop_only {
+    display: none !important;
+  }
+  .no_pad_col_ow_full {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .no_pad_left_ow_center {
+    margin-left: auto !important;
+  }
+  .wallet_img {
+    margin-top: 10%;
+  }
+  .app_image_bg {
+    background-image: url("../../theme-assets/images/solutions-graphic.png");
+    background-repeat: no-repeat;
+    background-color: #050301;
+    background-position: center;
+  }
+}
+
+.fancybox__button--zoom,
+.fancybox__button--slideshow,
+.fancybox__button--fullscreen,
+.fancybox__button--thumbs,
+.carousel__track {
+  display: none !important;
+}
+
+.flex-box {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-box #myCarousel {
+  flex: 1 1 50%;
+}
+
+.flex-box #desc {
+  flex: 1 1 50%;
+}
+
+.title {
+  font-family: "Poppins", "Comfortaa", "Roboto", "Helvetica Neue", Arial,
+    sans-serif !important;
+}
+
+.soft_title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-align: center;
+  /* color: #db4e20; */
+  color: #ffe089;
+  font-weight: 700;
+}
+
+@media (max-width: 575.98px) {
+  .amavideo {
+    width: 70vw;
+    height: 250px;
+  }
+}
+
+@media (min-width: 575.98px) {
+  .amavideo {
+    width: 100%;
+    height: 290px;
+  }
+}
+
+.dark-bg {
+  background: linear-gradient(80deg, #050b22, #020e2c 35%, #0d0318);
+  border-radius: 6px;
+  padding: 15px;
+}
+
+/*********modified css*******/
+.ca_txt {
+  font-size: 18px;
+  color: #fff;
+  word-break: break-all;
+}
+img.road_img {
+  width: 72px;
+  display: block;
+}
+
+.road_card {
+  background: #111;
+  padding: 37px;
+  border-radius: 10px;
+  height: 420px;
+  margin: 15px 4px;
+  border: 1px solid #ad2955;
+}
+
+.road_card h3,
+.road_card h2 {
+  font-family: "Simpsonfont", sans-serif;
+}
+.road_card ul {
+  margin: 0;
+  padding: 0;
+}
+
+.road_card ul li {
+  font-family: "Fishes Friends", sans-serif;
+  margin-left: 12px;
+}
+
+.partner-member img,
+.partner-member_img {
+  width: 269px;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .ca_txt {
+    font-size: 14px;
+    font-family: "poppins";
+    color: #fff;
+    word-break: break-all;
+  }
+}
