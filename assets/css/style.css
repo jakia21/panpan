@@ -15,28 +15,22 @@ Custom color and background color class palette
 */
 
 /***********google font**********/
-@import url("https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
 /*********font custom*************/
-@font-face {
-  font-family: "Hubot Sans"; /* Choose a unique name for your font */
-  src: url("/fonts/Hubot-Sans-Bold.ttf") format("woff2"),
-    /* Modern Browsers */ url("/fonts/Hubot-Sans-Bold.ttf") format("woff");
 
-  /* Older Browsers */ /* You can add more file formats here if needed (e.g., .ttf, .eot) */
-}
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Hubot Sans";
+  font-family: "Jua", sans-serif;
 }
 
 li,
 p,
 body {
-  font-family: "Fragment";
+  font-family: "Jua", sans-serif;
 }
 /* body {
   font-family: "Alien Spaceship", sans-serif;
@@ -728,7 +722,9 @@ img.road_img {
   width: 269px;
   margin: auto;
 }
-
+.title {
+  font-family: "Jua", sans-serif !important;
+}
 @media screen and (max-width: 768px) {
   .ca_txt {
     font-size: 14px;
